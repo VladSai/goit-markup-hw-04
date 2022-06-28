@@ -6,10 +6,13 @@
   --background-color: #2f303a;
   --bg-color-button: #188ce8;
   --background-team-buttons: #f5f4fa;
+  --background-icon-quality: #f5f4fa;
   --text-black: #000000;
   --mail-tel-color: rgba(255, 255, 255, 0.6);
   --border-color: #ececec;
   --border-color-img: #eeeeee;
+  --contacts-icon-color: #757575;
+  --customers-icon-fill: #afb1b8;
 }
 
 /* утилиты */
@@ -156,16 +159,29 @@ body {
 }
 
 .contacts .link {
+  display: flex;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  align-items: center;
   color: var(--primary-text-color);
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: var(--contacts-icon-color);
 }
 
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
+}
+
+.contacts .link:hover .contacts-icon,
+.contacts .link:focus .contacts-icon {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -243,6 +259,16 @@ body {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
+}
+
+.icons-quality {
+  display: flex;
+  width: 270px;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  justify-content: center;
+
+  background-color: var(--background-icon-quality);
 }
 
 /* featurs */
@@ -329,6 +355,44 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: var(--white-color);
+}
+
+.team-social-icon {
+  fill: #afb1b8;
+}
+
+.social-item-link:hover .team-social-icon,
+.social-item-link:focus .team-social-icon {
+  fill: var(--white-color);
+}
+
+.social-item-link:hover,
+.social-item-link:focus {
+  background-color: #2196f3;
+}
+
+/* customers */
+
+.customers {
+  display: flex;
+}
+
+.customers-list {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--customers-icon-fill);
+  border-radius: 4px;
+}
+
+.customers > .item + .item {
+  margin-left: 30px;
+}
+
+.client-icon {
+  fill: var(--customers-icon-fill);
 }
 
 /* footer */
