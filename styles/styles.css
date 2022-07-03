@@ -267,11 +267,10 @@ body {
 
 .icons-quality {
   display: flex;
-  width: 270px;
-  padding: 25px 0;
+  height: 120px;
   margin-bottom: 30px;
   justify-content: center;
-
+  align-items: center;
   background-color: var(--background-icon-quality);
 }
 
@@ -350,10 +349,12 @@ body {
 }
 
 .social-item-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
   background-color: var(--white-color);
 }
@@ -387,12 +388,13 @@ body {
   display: flex;
 }
 
-.customers-list {
-  display: inline-flex;
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 170px;
   height: 92px;
-  justify-content: center;
-  align-items: center;
   border: 1px solid var(--customers-icon-fill);
   border-radius: 4px;
 }
@@ -405,8 +407,8 @@ body {
   fill: var(--customers-icon-fill);
 }
 
-.customers-list:hover,
-.customers-list:focus {
+.customers-link:hover,
+.customers-link:focus {
   border-color: var(--accent-color);
 }
 
@@ -473,9 +475,7 @@ body {
 
 .social {
   align-items: center;
-  margin-top: 12x;
   margin-left: 70px;
-  margin-right: auto;
 }
 
 .connect {
@@ -494,8 +494,10 @@ body {
 }
 
 .contacts-social-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -526,6 +528,7 @@ body {
 }
 
 .button-filter {
+  cursor: pointer;
   padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
@@ -542,15 +545,8 @@ body {
 .button-filter:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-}
-
-/* active button */
-
-.active {
-  color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  background-color: var(--accent-color);
 }
 
 /* projects */
@@ -560,9 +556,18 @@ body {
   gap: 30px;
 }
 
-.project {
+.project-img {
   display: block;
   background-color: var(--white-color);
+}
+.project-item {
+  display: flex;
+}
+
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-title {
@@ -571,6 +576,7 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--title-text-color);
 }
 
 .project-desc {
@@ -584,4 +590,8 @@ body {
   border-right: 1px solid var(--border-color-img);
   border-left: 1px solid var(--border-color-img);
   border-bottom: 1px solid var(--border-color-img);
+}
+
+.projects .project-link {
+  text-decoration: none;
 }
